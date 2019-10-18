@@ -14,8 +14,8 @@ public class homework2 {
                 if(y==0) {
                     System.out.print(x);
                 }
-                if(x==0){
-                    System.out.print(y+1);
+                if(y==1||y==3||y==5||y==7||y==9||y==11){
+                    System.out.print("|");
                 }
                 else System.out.print("-");
             }
