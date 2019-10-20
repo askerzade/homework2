@@ -25,20 +25,21 @@ public class homework2 {
         int playerhorizontal;
         int playervertical;
         boolean isTrue = false;
-        int x;
-        int y;
         Scanner s1 = new Scanner(System.in);
         Scanner s2 = new Scanner(System.in);
         do {
             targethorizontal = random.nextInt(b);
             targetvertical = random.nextInt(b);
         } while (!(targethorizontal != 0 & targetvertical != 0));
-        for (x = 0; x < a.length; x++) {
+
+        for (int i = 1; i < 6; i++) {
+            for (int j = 1; j < 6; j++)
+                a[i][j] = "-|";
+        }
+        for (int i = 0; i < 6; i++) {
             System.out.println();
-            for (y = 0; y < a[x].length; y++) {
-                if (x == 0 || y == 0) System.out.print(a[x][y]);
-                else System.out.print("-|");
-            }
+            for (int j = 0; j < 6; j++)
+                System.out.print(a[i][j]);
         }
         System.out.println();
         while (!isTrue) {
@@ -47,44 +48,28 @@ public class homework2 {
                 System.out.println("Chose horizontal shooting coordinate");
                 playerhorizontal = s1.nextInt();
                 if (playerhorizontal == 0 || playerhorizontal > 5)
-                    System.out.println("inappropriate coordinate!");
+                    System.err.println("inappropriate coordinate!");
                 else break;
             }
             while (true) {
                 System.out.println("Chose vertical shooting coordinate");
                 playervertical = s2.nextInt();
                 if (playervertical == 0 || playervertical > 5)
-                    System.out.println("inappropriate coordinate!");
+                    System.err.println("inappropriate coordinate!");
                 else break;
             }
             if (playerhorizontal == targethorizontal && playervertical == targetvertical) {
                 isTrue = true;
-                for (x = 0; x < a.length; x++) {
-                    System.out.println();
-                    for ( y = 0; y < a[x].length; y++) {
-                        if (x == 0 || y == 0) System.out.print(a[x][y]);
-                   //     else if (x == playerhorizontal && y == playervertical)
-                   //         System.out.print("*|");
-                        else if (x == playerhorizontal && y == playervertical)
-                            System.out.print("x|");
-                        else System.out.print("-|");
-                    }
-                }
+                a[playerhorizontal][playervertical] = "x|";
                 System.out.println();
                 System.out.println("Congratulation! You have Won!");
-            } else {
-                for ( x = 0; x < a.length; x++) {
-                    System.out.println();
-                    for (y = 0; y < a[x].length; y++) {
-                        if (x == 0 || y == 0) System.out.print(a[x][y]);
-                        else if (x == playerhorizontal && y == playervertical)
-                            System.out.print("*|");
-                        else System.out.print("-|");
-                    }
-
-                }
-
+            } else a[playerhorizontal][playervertical] = "*|";
+            for (int i = 0; i < 6; i++) {
+                System.out.println();
+                for (int j = 0; j < 6; j++)
+                    System.out.print(a[i][j]);
             }
+
         }
     }
 }

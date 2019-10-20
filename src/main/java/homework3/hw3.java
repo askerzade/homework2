@@ -25,7 +25,7 @@ public class hw3 {
             System.out.println("Please, input the day of the week:");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
-            String input1 = input.replace(" ","");
+            String input1 = input.replace(" ", "");
             switch (input1.toLowerCase()) {
                 case "sunday":
                     System.out.printf("Your tasks for %s: %s.", scedule[0][0], scedule[0][1]);
