@@ -7,17 +7,17 @@ public class homework2 {
     public static void main(String[] args) {
         System.out.println("All set. Get ready to rumble!");
         String[][] a = new String[6][6];
-        a[0][0] = "0|";
+        a[0][0] = "|0|";
         a[0][1] = "1|";
         a[0][2] = "2|";
         a[0][3] = "3|";
         a[0][4] = "4|";
         a[0][5] = "5|";
-        a[1][0] = "1|";
-        a[2][0] = "2|";
-        a[3][0] = "3|";
-        a[4][0] = "4|";
-        a[5][0] = "5|";
+        a[1][0] = "|1|";
+        a[2][0] = "|2|";
+        a[3][0] = "|3|";
+        a[4][0] = "|4|";
+        a[5][0] = "|5|";
         int b = a.length;
         Random random = new Random();
         int targethorizontal;
