@@ -50,4 +50,8 @@ public class Human {
         return String.format("Human{name=%s, surname=%s year=%d, iq=%d, mother=%s %s,father=%s %s, pet={" + pet.toString() + "}}"
                 , name, surname, birthDate, iq, mother.name, mother.surname, father.name, father.surname);
     }
+    public String toStringParents() {
+        return String.format("Human{name=%s, surname=%s year=%d}"
+                , name, surname, birthDate);
+    }
 }
