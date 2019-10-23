@@ -23,7 +23,7 @@ public class HappyFamilyMain {
 
     }
 
-    public static void familyQuliyev() {
+    private static void familyQuliyev() {
         Human male = new Human("Али", "Гулиев", 1986);
         Human female = new Human("Инара", "Гулиева", 1990);
         Pet pet = new Pet("Cat", "Квентин", 1, 43, new String[]{"eat, ", "sleep, ", "poo, ", "destroy everything"});
